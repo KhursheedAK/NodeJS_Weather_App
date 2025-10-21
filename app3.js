@@ -1,4 +1,3 @@
-// Without Yargs
 import request from 'postman-request';
 import dotenv from 'dotenv';
 dotenv.config();
@@ -44,10 +43,14 @@ const getWeatherData = (query, units, callback) => {
   });
 };
 
-getWeatherData('san diego', 'm', (error, data) => {
-  if (error) {
-    console.log('Error: ', error);
-  } else {
-    console.log('Data: ', data);
-  }
-});
+// getWeatherData('san diego', 'm', (error, data) => {
+//   if (error) {
+//     console.log('Error: ', error);
+//   } else {
+//     console.log('Data: ', data);
+//   }
+// });
+
+export default {
+  getWeatherData,
+};
